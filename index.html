@@ -31,13 +31,15 @@
     for(var i=1; i <= (cols **2); i++){
       createDiv();
     }
-    containerWidth(75 * cols)
-    containerHeight(75 * cols)
+    containerWidth(25 * cols)
+    containerHeight(25 * cols)
   }
 
   container.addEventListener('mouseover', function(e){
     var box = e.target;
+    if (box !== container){
     box.style.backgroundColor = 'black';
+  }
   })
 
 
