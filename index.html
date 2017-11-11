@@ -12,7 +12,7 @@
 
   </div>
 
-  <button>Clear board</button>
+  <button id= "clearButton">Clear board</button>
 <script>
 
 //Create the grid
@@ -41,17 +41,17 @@
 
 //Mouse over changes the color of squares to black
   container.addEventListener('mouseover', function(e){
-    var box = e.target;
-    if (box !== container){
-    box.style.backgroundColor = 'black';
+    var boxes = e.target;
+    if (boxes !== container){
+    boxes.style.backgroundColor = 'black';
   }
   })
 
 //Button should ideally clear the board
-  var btn = document.querySelector('button');
-  btn.addEventListener('click', function(e){
-    var box = document.querySelector('.box');
-    box.style.backgroundColor = 'white';
+  var clearButton = document.querySelector('clearButton');
+  clearButton.addEventListener('click', function(e){
+    var boxes = document.querySelectorAll('.box');
+    boxes.style.backgroundColor = 'white';
 
   })
 
