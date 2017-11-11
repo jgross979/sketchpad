@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title>Sketch Pad</title>
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id = "container">
+
+  </div>
+<script>
+
+  const container = document.querySelector('#container');
+  let squares = prompt('Choose the number of columns');
+
+  createGrid(squares);
+
+  function containerWidth(number){
+    return container.style.width = `${number}px`;
+  }
+  function containerHeight(number){
+    return container.style.height = `${number}px`;
+  }
+
+  function createDiv(){
+    let div = document.createElement('div');
+    div.classList.toggle('grid')
+      return container.appendChild(div);
+  }
+
+  function createGrid(cols){
+    for(var i=1; i <= (cols **2); i++){
+      createDiv();
+    }
+    containerWidth(75 * cols)
+    containerHeight(75 * cols)
+  }
+
+</script>
+
+</body>
+
+</html>
