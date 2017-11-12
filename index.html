@@ -51,7 +51,9 @@
   var clearButton = document.querySelector('#clearButton');
   clearButton.addEventListener('click', function(e){
     var boxes = document.querySelectorAll('.box');
-    boxes.style.backgroundColor = 'white';
+    boxes.forEach(function(box){
+      box.style.backgroundColor = 'white';
+    })
 
   })
 
