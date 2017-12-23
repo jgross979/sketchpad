@@ -11,8 +11,9 @@
   <div id = "container">
 
   </div>
-
-  <button id= "clearButton">Clear board</button>
+  <div class= "center">
+  <button id= "clearButton">CLEAR BOARD</button>
+  </div>
 <script>
 
 //Create the grid
@@ -35,15 +36,21 @@
     for(var i=1; i <= (cols **2); i++){
       createDiv();
     }
-    containerWidth(25 * cols)
-    containerHeight(25 * cols)
+    containerWidth(20 * cols)
+    containerHeight(20 * cols)
   }
 
-//Mouse over changes the color of squares to black
+//Mouse over changes the color of squares
+
+  function random(maxNumber){
+    return Math.floor(Math.random() * maxNumber);
+  }
+
+
   container.addEventListener('mouseover', function(e){
     var boxes = e.target;
     if (boxes !== container){
-    boxes.style.backgroundColor = 'black';
+    boxes.style.backgroundColor = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
   }
   })
 
@@ -56,6 +63,8 @@
     })
 
   })
+
+
 
 
 
